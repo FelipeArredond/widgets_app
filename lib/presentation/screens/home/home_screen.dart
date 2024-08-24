@@ -24,11 +24,18 @@ class _HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
+      physics: const BouncingScrollPhysics(),
       itemCount: appMenuItems.length,
-      itemBuilder: (context, index) => ListTile(
-        leading: Icon(appMenuItems[index].icon),
-        title: Text(appMenuItems[index].tittle),
-      ),
+      itemBuilder: (context, index) {
+
+        final menuItem = appMenuItems[index];
+
+        return ListTile(
+          leading: Icon(menuItem.icon),
+          title: Text(menuItem.tittle),
+          subtitle: Text(menuItem.subTittle),
+        );
+      },
     );
   }
 }
