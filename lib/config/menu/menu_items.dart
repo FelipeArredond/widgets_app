@@ -24,6 +24,6 @@ const appMenuItems = <MenuItem>[
       icon: Icons.smart_button_outlined,
       tittle: 'Tarjetas',
       subTittle: 'Un contenedor estilizado',
-      url: '/card'
+      url: '/cards'
   ),
 ];
